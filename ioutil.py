@@ -41,6 +41,8 @@ class IOUtil():
                     result = date_pattern.search(line)
                     yyyy, mm, dd = result.groups()
                     version = yyyy + mm + dd
+                elif program_name == 'samtools':
+                    version = line.split()[1]
                 else:
                     version = line.split(' ')[-1]
                 break
